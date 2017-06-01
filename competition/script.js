@@ -56,7 +56,7 @@ setTimeout(function() {
 
 			load_background();
 
-		}, 0);
+		}, 700);
 
-	}, 0);
-}, 0);
+	}, 500);
+}, 2000);
