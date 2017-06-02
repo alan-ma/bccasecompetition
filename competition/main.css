@@ -1,6 +1,6 @@
 html, body {
 	margin: 0;
-	font-family: "Montserrat";
+	font-family: "Poppins";
 }
 
 #loading_container {
@@ -41,8 +41,12 @@ html, body {
 	animation-delay: 0.1s;
 }
 
-#loading #one {
+#loading #two {
 	animation-delay: 0.2s;
+}
+
+#loading #one {
+	animation-delay: 0.3s;
 }
 
 @keyframes bounce {
@@ -61,9 +65,14 @@ html, body {
 }
 
 #container .box {
-	padding: 0 200px;
-	min-height: 100%;
+	padding: 0;
 	position: relative;
+	max-width: 1080px;
+	margin: auto;
+}
+
+#competition {
+	min-height: 100%;
 }
 
 #fb {
@@ -79,6 +88,7 @@ html, body {
 
 #competition h1 {
 	padding-bottom: 10px;
+	margin-top: 10px;
 }
 
 .primary {
@@ -162,10 +172,38 @@ html, body {
 	100% {transform: translateY(7px);}
 }
 
-#sfu {
-	background: url(images/sfu.jpg);
-	background-attachment: fixed;
-	background-size: cover;
+#container #keynote {
+	background: rgba(25, 41, 81, 0.8);
+	margin: 20px auto;
+}
+
+#keynote .primary {
+	padding: 20px 50px;
+	color: #eee;
+	line-height: 30px;
+}
+
+#keynote #speaker {
+	border-radius: 50%;
+	height: 300px;
+	width: 300px;
+	float: left;
+	margin: 0 30px 10px 0;
+}
+
+#keynote h1 {
+	margin: 10px 0;
+	color: white;
+	font-size: 2.5rem;
+}
+
+#keynote p {
+	text-align: left;
+	margin: 5px;
+}
+
+#container #sfu {
+	padding-top: 0;
 }
 
 #sfu h1 {
@@ -180,46 +218,45 @@ html, body {
 
 #sfu .primary {
 	padding: 20px 300px 30px 300px;
-	position: absolute;
-	z-index: 3;
 	background: #f2f2f2;
-	margin: 150px -200px;
+	margin: 0 -200px;
 }
 
 #sfu .primary p {
 	width: 480px;
-	float: left;
 	margin-right: 30px;
+	display: inline-block;
 }
 
 #sfu .logo {
-	width: 25vw;
-	margin-top: 10px;
-	display: block;
+	width: 250px;
+	margin: 10px 30px;
+	display: inline-block;
+	padding: 0;
 }
 
 #sfu h3 {
 	font-weight: normal;
 }
 
-#lunch {
-	background: #e5e5e5;
+#container #lunch {
+	padding: 30px;
 }
 
 #lunch h1 {
 	color: #222;
 	margin-left: 50px;
+	margin-top: 0;
 }
 
 #lunch .primary {
-	padding: 100px 0 100px 0;
-	position: absolute;
+	padding: 0;
 	width: 60%;
-	right: 0;
+	margin-left: 40%;
 }
 
 #lunch .primary p {
-	margin: 0 300px 0 50px;
+	margin: 0 50px;
 }
 
 #lunch .image_wrapper {
@@ -242,11 +279,35 @@ html, body {
 	margin-left: 50px;
 }
 
+#container .spacer {
+	background: url(images/sfu.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	height: 225px;
+	position: relative;
+	z-index: 1;
+}
+
+#container #schedule {
+	height: auto;
+	width: auto;
+}
+
+#container #schedule img {
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+	display: block;
+}
+
 #sponsors {
 	background: #fff;
-	position: absolute;
-	width: 100%;
-	margin: 0 -150px;
+	margin: 0;
+	max-width: 100% !important;
+}
+
+#sponsors .primary {
+	margin: auto;
 }
 
 #sponsor_logos {
@@ -254,6 +315,7 @@ html, body {
 	justify-content: space-around;
 	flex-wrap: wrap;
 	align-items: center;
+	width: 100%;
 }
 
 #sponsors img {
@@ -274,10 +336,6 @@ footer {
 }
 
 @media screen and (max-width: 1080px) {
-	#container .box {
-		padding: 0 10px;
-	}
-
 	.primary {
 		padding: 0 10px 90px 10px;
 	}
@@ -292,9 +350,13 @@ footer {
 		padding: 5px 20px;
 	}
 
+	#keynote .primary {
+		padding: 10px;
+	}
+
 	#sfu .primary {
 		padding: 10px 0;
-		margin: 100px -10px;
+		margin: 10px -10px;
 		width: 100%;
 	}
 
@@ -319,6 +381,7 @@ footer {
 
 	#lunch .primary {
 		width: 80%;
+		margin-left: 20%;
 	}
 
 	#lunch .primary p {
@@ -349,18 +412,22 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+	#keynote h1 {
+		font-size: 2rem;
+	}
+
 	#sfu h1 {
 		width: auto;
 	}
 
 	#sfu .logo {
 		max-width: 200px;
-		float: left;
 		margin-left: 20px;
 	}
 
 	#lunch .primary {
 		width: 90%;
+		margin-left: 10%;
 	}
 
 	#lunch .image_wrapper {
